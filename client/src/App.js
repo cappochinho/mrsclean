@@ -1,30 +1,14 @@
-import React, {useEffect, useState } from 'react';
-import Gallery from './AppComponents/NavigationBar';
+// import React, {useEffect, useState } from 'react';
+import { Navigation, SocialLinks, UpperText } from "./AppComponents/Header";
 
 function App() {
-
-  const [backendData, setBackendData] = useState([{}]);
-
-  useEffect(() => {
-    fetch("/api").then(
-      response => response.json()
-    ).then(
-      data => {
-        setBackendData(data)
-      }
-    )
-  }, []);
-
   return (
-    <div>
-      {(typeof backendData.users === 'undefined') ? (
-        <p>Loading...</p>
-      ): (
-        backendData.users.map((user, i) => (
-          <p key={i}>{user}</p>
-        ))
-      )}
-      <Gallery />
+    <div style={{
+      backgroundColor: 'ghostwhite',
+    }}>
+      <SocialLinks />;
+      <Navigation />;
+      <UpperText />;
     </div>
   )
 }

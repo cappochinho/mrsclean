@@ -6,7 +6,12 @@ export function UpperText() {
   const slogan = '🧼🌟 Conquer Tough Grease with Ease! 🧽';
 
   return (
-    <header>
+    <header style={
+        {
+          textAlign: 'center',
+          padding: '40px',
+        }
+      }>
       <h1>{intro}</h1>
       <h3>{slogan}</h3>
     </header>
@@ -21,10 +26,21 @@ export function Navigation() {
         alt="Mrs. Clean Logo"
         width={50}
         height={50}
+        style={{
+          marginLeft: '20px',
+        }}
       />
-      <a href="?" Style="text-decoration: none"><FaProductHunt />Products</a>
-      <a href="?"><FaCartArrowDown /></a>
-      <a href="?"><FaSearch /></a>
+      <div style={
+        {
+          position: 'relative',
+          left: '1200px',
+        }
+      }
+      >
+        <a href="?" style={{ textDecoration: 'none' }}><FaProductHunt />roducts</a>
+        <a href="?" style={{ textDecoration: 'none', marginLeft: '10px' }}><FaCartArrowDown /></a>
+        <a href="?" style={{ textDecoration: 'none', marginLeft: '10px' }}><FaSearch /></a>
+      </div>
     </>
   )
 }
@@ -35,13 +51,14 @@ export class SocialLinks extends Component {
       <div  style={
           {
             backgroundColor: 'yellowgreen',
-            marginBottom: 10,
+            marginBottom: '10px',
+            padding: '30px',
           }
         }>
         <a href='/#' Style="text-decoration: none" >Contact Us</a>
-        <a href='https://www.instagram.com/mrscleanpaste/' target='_'><FaInstagram /></a>
-        <a href='https://www.tiktok.com/@mrscleanpaste' target='_'><FaTiktok /></a>
-        <a href='//#'><FaYoutube /></a>
+        <a href='https://www.instagram.com/mrscleanpaste/' target='_' style={{ position: 'relative', left: '1145px', marginLeft: '5px'}}><FaInstagram /></a>
+        <a href='https://www.tiktok.com/@mrscleanpaste' target='_' style={{ position: 'relative', left: '1150px', marginLeft: '5px'}}><FaTiktok /></a>
+        <a href='//#' style={{ position: 'relative', left: '1155px', marginLeft: '10px', marginRight: '50px'}}><FaYoutube /></a>
       </div>
     )
   }

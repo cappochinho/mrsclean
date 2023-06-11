@@ -1,31 +1,25 @@
-import React, {useEffect, useState } from 'react';
-import { Navigation, SocialLinks, UpperText } from "./AppComponents/Header";
-import { Images, Videos } from "./AppComponents/Body";
-import { AddressSection} from "./AppComponents/Footer";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import About from './pages/About';
+import Cart from './pages/Cart';
+import Home from './pages/Home';
+import Products from './pages/Products';
 import './App.css';
 
 function App() {
   return (
-    <div style={{
-      backgroundColor: 'ghostwhite',
-    }}>
-      <SocialLinks />
-      <Navigation />
-      <UpperText />
-
-      <div style={
-        {
-          backgroundColor: 'whitesmoke'
-        }
-      }>
-        <Images />
-      </div>
-      <>
-        <Videos />
-      </>
-      <>
-        <AddressSection />
-      </>
+    <div>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='cart' element={<Cart />} />
+          <Route path='products' element={<Products />} />
+       </Route>
+      </Routes>
+    </BrowserRouter>
     </div>
 
   )

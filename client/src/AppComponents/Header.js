@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { FaInstagram, FaTiktok ,FaYoutube, FaCartArrowDown, FaSearch, FaProductHunt} from 'react-icons/fa';
+import React from 'react';
 
 export function UpperText() {
   const intro = 'Mrs Clean Dishwashing Paste';
@@ -18,7 +17,7 @@ export function UpperText() {
   )
 }
 
-export function Navigation() {
+export function Logo() {
   return(
     <>
       <img
@@ -30,36 +29,7 @@ export function Navigation() {
           marginLeft: '20px',
         }}
       />
-      <div style={
-        {
-          position: 'relative',
-          left: '1200px',
-        }
-      }
-      >
-        <a href="?" style={{ textDecoration: 'none' }}><FaProductHunt />roducts</a>
-        <a href="?" style={{ textDecoration: 'none', marginLeft: '10px' }}><FaCartArrowDown /></a>
-        <a href="?" style={{ textDecoration: 'none', marginLeft: '10px' }}><FaSearch /></a>
-      </div>
     </>
   )
 }
 
-export class SocialLinks extends Component {
-  render() {
-    return (
-      <div  style={
-          {
-            backgroundColor: 'yellowgreen',
-            marginBottom: '10px',
-            padding: '30px',
-          }
-        }>
-        <a href='/#' Style="text-decoration: none" >Contact Us</a>
-        <a href='https://www.instagram.com/mrscleanpaste/' target='_' style={{ position: 'relative', left: '1145px', marginLeft: '5px'}}><FaInstagram /></a>
-        <a href='https://www.tiktok.com/@mrscleanpaste' target='_' style={{ position: 'relative', left: '1150px', marginLeft: '5px'}}><FaTiktok /></a>
-        <a href='//#' style={{ position: 'relative', left: '1155px', marginLeft: '10px', marginRight: '50px'}}><FaYoutube /></a>
-      </div>
-    )
-  }
-}

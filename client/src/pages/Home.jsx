@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react';
+import React from 'react';
 import { Logo, UpperText } from "../AppComponents/Header";
 import { Images, Videos } from "../AppComponents/Body";
 import { AddressSection} from "../AppComponents/Footer";

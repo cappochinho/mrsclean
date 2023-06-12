@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Logo } from '../AppComponents/Header';
+import { AddressSection } from '../AppComponents/Footer';
 import './styles/Products.css'
 
 export default function Products() {
+
+  const [priceData, setPriceData] = useState(null);
+
+  useEffect(() => {
+    fetch("/api").then(
+      response => response.json()
+    ).then(
+      data => {
+        setPriceData(data);
+      }
+    )
+  }, []);
+
   return (
     <div>
       <Logo />
@@ -32,7 +46,15 @@ export default function Products() {
           }
         />
         <div className='greentext'>Green Paste</div>
+        <div style={{ textAlign: 'center' }}>
+          {priceData ? (
+            <p>GHS {priceData}.00</p>
+          ) : (
+            <p>Loading...</p>
+          )}
+        </div>
       </div>
+      <br />
       <div className='yimagecontainer'>
         <img
           className='yellowimage'
@@ -50,10 +72,17 @@ export default function Products() {
           }
         />
         <div className='yellowtext'>Yellow Paste</div>
+        <div style={{ textAlign: 'center' }}>
+          {priceData ? (
+            <p>GHS {priceData}.00</p>
+          ) : (
+            <p>Loading...</p>
+          )}
+        </div>
       </div>
     </div>
-      </div>
     </div>
-
+    <AddressSection />
+    </div>
   );
 }

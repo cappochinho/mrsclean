@@ -1,7 +1,12 @@
 import React from 'react';
+import { AddressSection } from '../AppComponents/Footer';
 
 export default function Cart() {
   return (
-    <h1>Cart</h1>
+    <div>
+      <h1>Cart</h1>
+
+      <AddressSection />
+    </div>
   );
 }

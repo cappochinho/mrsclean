@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Logo } from '../AppComponents/Header';
 import { AddressSection } from '../AppComponents/Footer';
+import { FormComponent } from '../AppComponents/ProductForm';
 import './styles/Products.css'
 
 export default function Products() {
@@ -82,6 +83,7 @@ export default function Products() {
       </div>
     </div>
     </div>
+    <FormComponent />
     <AddressSection />
     </div>
   );

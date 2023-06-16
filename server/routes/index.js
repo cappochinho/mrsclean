@@ -1,10 +1,10 @@
 const express = require('express');
-const DataController = require('../controllers/DataController');
+const PricesController = require('../controllers/PricesController');
 
 const router = express.Router();
 
 router.get('/api', (req, res) => {
-  DataController.getPrices(req, res);
+  PricesController.getPrices(req, res);
 });
 
 module.exports = router;

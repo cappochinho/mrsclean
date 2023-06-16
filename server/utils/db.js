@@ -15,6 +15,7 @@ class DBClient {
       .then(() => {
         this.isAlive = true; // Set isAlive to true when connected successfully
         this.products = mongoose.connection.db.collection('products');
+        this.suggestions = mongoose.connection.db.collection('suggestions');
         console.log('MongoDB connected');
       })
       .catch((err) => {

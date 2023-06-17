@@ -58,7 +58,10 @@ export function Images() {
 export function Videos() {
   return(
     <div>
-      <h4 style={{ textAlign: 'center', padding: '20px', color: 'blueviolet' }}>Mrs Clean Paste in Action</h4>
+      <div style={{ textAlign: 'center', padding: '20px', color: 'blueviolet' }}>
+        <p>Watch in awe as our environmentally conscious dishwashing paste effortlessly tackles grease and grime, leaving your dishes sparkling clean and your conscience clear. With its unique composition, our paste creates rich, luxurious suds that cling to every dish, ensuring thorough cleaning with minimal effort.</p>
+      </div>
+      {/* <h4 style={{ textAlign: 'center', padding: '20px', color: 'blueviolet' }}>Mrs Clean Paste in Action</h4> */}
       <div style={
         { position: 'relative', display: 'flex', flexDirection: 'column',
           justifyContent: 'center', alignItems: 'center',  border: '2px solid whitesmoke',
@@ -75,7 +78,14 @@ export function Videos() {
           muted={true}
         />
       </div>
-      <h4 style={{ textAlign: 'center', padding: '20px', color: 'blueviolet' }}>Lathers with water easily!</h4>
+      <div style={{ fontFamily: 'Arial, sans-serif', fontSize: '18px', textAlign: 'center', padding: '20px', color: 'blueviolet'  }}>
+        <p style={{ marginBottom: '20px' }}>
+          Experience the sheer delight of our <strong>eco-friendly dishwashing paste</strong> as it effortlessly lathers with water, creating a luxurious and satisfying foam.
+        </p>
+        <p style={{ marginBottom: '20px' }}>
+          Watch as a small amount of our paste transforms into a rich, velvety lather, making dishwashing a truly enjoyable experience.
+        </p>
+      </div>
       <div style={
         { position: 'relative', display: 'flex', flexDirection: 'column',
           justifyContent: 'center', alignItems: 'center',  border: '2px solid whitesmoke',
